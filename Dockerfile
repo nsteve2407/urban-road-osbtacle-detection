@@ -99,3 +99,5 @@ RUN curl -sSL https://sdk.cloud.google.com > /tmp/gcl && bash /tmp/gcl --install
 ENV PATH="$PATH:/root/gcloud/google-cloud-sdk/bin"
 
 RUN ldconfig
+RUN pip uninstall keras -y
+RUN pip install keras==2.5.0rc0

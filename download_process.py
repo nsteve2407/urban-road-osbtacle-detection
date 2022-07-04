@@ -37,7 +37,7 @@ def create_tf_example(filename, encoded_jpeg, annotations, resize=True):
         encoded_jpeg = tf.io.encode_jpeg(image_res).numpy()
         width, height = 640, 640
 
-    mapping = {1: 'vehicle', 2: 'pedestrian', 4: 'cyclist'}
+    mapping = {1: 'vehicle', 2: 'pedestrian',3:'sign', 4: 'cyclist'}
     image_format = b'jpg'
     xmins = []
     xmaxs = []
@@ -120,7 +120,7 @@ def process_tfr(path, data_dir):
         # we are only saving every 10 frames to reduce the number of similar
         # images. Remove this line if you have enough space to work with full
         # temporal resolution data.
-        if idx % 10 == 0:
+        if idx % 3 == 0:
             frame = open_dataset.Frame()
             frame.ParseFromString(bytearray(data.numpy()))
             encoded_jpeg, annotations = parse_frame(frame)
@@ -148,12 +148,7 @@ if __name__ == "__main__":
                         help='data directory')
     parser.add_argument('--size', required=False, default=100, type=int,
                         help='Number of files to download')
-    args = parser.parse_args()
-    data_dir = args.data_dir
-    size = args.size
-
-    # open the filenames file
-    with open('filenames.txt', 'r') as f:
+    args = parser.30enames.txt', 'r') as f:
         filenames = f.read().splitlines()
     logger.info(f'Download {len(filenames[:size])} files. Be patient, this will take a long time.')
 
