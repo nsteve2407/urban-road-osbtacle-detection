@@ -2,3 +2,9 @@
 *.ipynb_checkpoints/
 .devcontainer
 data
+*.index
+*.data-00000-of-00001
+checkpoint
+read_data.py
+*.pb
+*.tar.gz

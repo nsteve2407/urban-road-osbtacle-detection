@@ -17,7 +17,22 @@ def split(source, destination):
         - source [str]: source data directory, contains the processed tf records
         - destination [str]: destination data directory, contains 3 sub folders: train / val / test
     """
-    # TODO: Implement function
+    # Using a 90-9-1 train-val-test split
+    files = os.listdir(source)
+    random.shuffle(files)
+    train_nums = int(len(files)*0.9)
+    val_nums = int(len(files)*0.09)
+    train_files = files[:train_nums]
+    val_files = files[train_nums:(train_nums+val_nums)]
+    test_files = files[(train_nums+val_nums):]
+    for file in train_files:
+        os.rename(os.path.join(source,file),os.path.join(destination,'train',file))
+    for file in val_files:
+        os.rename(os.path.join(source,file),os.path.join(destination,'val',file))
+    for file in test_files:
+        os.rename(os.path.join(source,file),os.path.join(destination,'test',file))
+        
+
 
 
 if __name__ == "__main__":
