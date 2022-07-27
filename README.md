@@ -49,7 +49,13 @@ We use hold-one-out stlye cross validation approach. We use a subset of the Waym
 This is a baseline model which is taken from the [Tensorflow model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md). The model is pretrained on the MSCOCO dataset and therefore serves as a good starting point. The model uses a ResNet50 backbone with 5 SSD detection layers. The model is trained using a cosine decayed learning rate coupled with momentum optimizer.
 
 ### Results
-The model performace after training for 50K epochs is shown in the following figures. The model only achieves a mAP of 11% inspite of having a very high precision for large and medium size boxes. The precision and recall for the small sized boxes though is very low at 4% and 10% respectively.
+The model performace after training for 50K epochs is shown in the following figures.
+
+![Loss](https://github.com/nsteve2407/urban-road-osbtacle-detection/blob/master/images/baseline_loss.png)
+
+![prec-base](https://github.com/nsteve2407/urban-road-osbtacle-detection/blob/master/images/prec_baseline.png)
+
+The model only achieves a mAP of 11% inspite of having a very high precision for large and medium size boxes. The precision and recall for the small sized boxes though is very low at 4% and 10% respectively.
 ## Performance Improvement
 To improve model performance, the following changes were made:
 
