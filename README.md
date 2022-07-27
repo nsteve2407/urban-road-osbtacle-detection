@@ -62,6 +62,8 @@ To improve model performance, the following changes were made:
 ### a. Scale and Aspect Ratio Selection.
 To enhance the model performance for smaller objects the scale which was originally set to 4.0 was reduced to 3.0, which was decided based on the classwise scale distributions introduced in the Data Analysis. To understand the Apsect Ratios, a plot of the aspct ratio distributions within the dataset was generated:
 
+![ar](https://github.com/nsteve2407/urban-road-osbtacle-detection/blob/master/images/aspect-ratios.png)
+
 Based on the plot we selected 0.5,1.0,3.0 as the defult aspect ratios for anchor boxes at each level.
 
 ### b. Learning Rate
@@ -80,3 +82,12 @@ iii. Random Hue and Contrast
 ## Results
 A performance comparison of the baseline model with the updated model is shown in the figure below. The lines in orange represent the updated model.
 We can see from the precision and recall curves that the model precision for small images increases from 4% to 9% and recall from 10% to 17%. The mAP @ 0.5 IoU increases from 20% to ~37%
+
+### Loss
+![loss](https://github.com/nsteve2407/urban-road-osbtacle-detection/blob/master/images/loss.png)
+
+### Precision
+![prec](https://github.com/nsteve2407/urban-road-osbtacle-detection/blob/master/images/precision.png)
+
+### Recall
+![reccall](https://github.com/nsteve2407/urban-road-osbtacle-detection/blob/master/images/recall.png)
