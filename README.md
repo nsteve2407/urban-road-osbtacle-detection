@@ -25,13 +25,18 @@ We use images from the forward facing camera in the Waymo Open Dataset. The data
 
 ### Class Distribution
 A majority of the annotations in the images are Vehicles which make up around 75% of the annotations. Pedestrians account for 23.5%, while the remaning 0.7% of them are bicyclisits.
+
 ![Classes](https://github.com/nsteve2407/urban-road-osbtacle-detection/blob/master/images/classes.png)
 
 ### Scale and Aspect Ratios
 The classwise scale and aspect ratios are highlighted in the following figures. It can be seen that pedestrians and bicyclists annotations have a smaller scale in the range 0.005-0.01. Vehicles though have a larger scale range indicating that the variation in their sizes is larger.
+
 ![Scales](https://github.com/nsteve2407/urban-road-osbtacle-detection/blob/master/images/bbox-scale.png)
+
 For Aspect Ratios, pedestrians and cyclists have a similar range which is concentrated between 2-4, while that of Vehicles is generally smaller in the range 0.5-2
+
 ![AR](https://github.com/nsteve2407/urban-road-osbtacle-detection/blob/master/images/bbox-aspect-ratio.png)
+
 ### Position Distributions
 The classwise position distributions are shown in the heat maps below:
 
