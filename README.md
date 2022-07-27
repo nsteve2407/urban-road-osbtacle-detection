@@ -1,4 +1,3 @@
-# urbar-road-osbtacle-detection
 
 # Urban Road Object Detection
 Object Detection is a fundamental task for an Autonomous Vehicle. This repo contains configurations and code required to detect road users in camera images using the [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). The object detection models are trained on 2D Bounding Box annotations provided in the Waymo Open Dataset. We train the models to detect three classes: Vehicles, Pedestrians and Cyclists.
