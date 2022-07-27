@@ -40,6 +40,8 @@ For Aspect Ratios, pedestrians and cyclists have a similar range which is concen
 ### Position Distributions
 The classwise position distributions are shown in the heat maps below:
 
+![Pos](https://github.com/nsteve2407/urban-road-osbtacle-detection/blob/master/images/position-distributions.png)
+
 It can be seen that Vechile classes are more likely to be seen at the center of the images. Pedestrians are also somewhat uniformly distributed around the image center. The distribution is much more sporadic in case of bicyclists. This could be because of the very few instances of bicyclists within the dataset.
 ## Cross Validation
 We use hold-one-out stlye cross validation approach. We use a subset of the Waymo Open Dataset consisting of 500 sequences. 90% of the data is used for training and remaining 10% is used for Cross Validation
