@@ -56,6 +56,8 @@ The model performace after training for 50K epochs is shown in the following fig
 ![prec-base](https://github.com/nsteve2407/urban-road-osbtacle-detection/blob/master/images/prec_baseline.png)
 
 The model only achieves a mAP of 11% inspite of having a very high precision for large and medium size boxes. The precision and recall for the small sized boxes though is very low at 4% and 10% respectively.
+
+Also, from the plots of classification and total loss we notice that after around 30K epochs the eval loss for classification begins to increase despite the training loss showing a downward trend. This indicates that the model begins to overfit at this point.
 ## Performance Improvement
 To improve model performance, the following changes were made:
 
@@ -69,7 +71,7 @@ Based on the plot we selected 0.5,1.0,3.0 as the defult aspect ratios for anchor
 ### b. Learning Rate
 An experiment was done by sweeping the learning rate between 1e-5 and 1e-1, in order to select the learning rate for which there was the steepest drop in loss. Accordingly a step learning rate starting at 1e-3 and then decreasing to 1e-4 was selected
 
-### c. Data Aumentation
+### c. Data Augmentation
 We added the following augmentation to avoid overfitting:
 
 i. Random Image Cropping
