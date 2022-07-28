@@ -57,7 +57,7 @@ The model performace after training for 50K epochs is shown in the following fig
 
 The model only achieves a mAP of 11% inspite of having a very high precision for large and medium size boxes. The precision and recall for the small sized boxes though is very low at 4% and 10% respectively.
 
-Also, from the plots of classification and total loss we notice that after around 30K epochs the eval loss for classification begins to increase despite the training loss showing a downward trend. This indicates that the model begins to overfit at this point.
+Also, from the plots of classification and total loss we notice that after around 30K epochs the eval loss(red) for classification begins to increase despite the training loss(blue) showing a downward trend. This indicates that the model begins to overfit at this point.
 ## Performance Improvement
 To improve model performance, the following changes were made:
 
